@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dygvypqmu3wqm"]
+
+[ext_resource type="Script" path="res://scenes/tower_preview.gd" id="1_1ob1i"]
+[ext_resource type="Texture2D" uid="uid://dasd7wwe553p3" path="res://assets/icon.svg" id="2_o63sk"]
+
+[node name="Tower" type="Area2D"]
+script = ExtResource("1_1ob1i")
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(64, -55, 64, 54, 53, 64, -53, 64, -64, 53, -64, -53, -54, -64, 53, -64)
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_o63sk")

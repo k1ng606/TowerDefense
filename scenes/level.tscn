@@ -1,13 +1,47 @@
 [gd_scene load_steps=3 format=3 uid="uid://lvdjdo2el18t"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_thq3s"]
-[ext_resource type="PackedScene" uid="uid://c3nd3kjbbp2vi" path="res://scenes/tower.tscn" id="2_exkv6"]
 
-[node name="level" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfjxe"]
+bg_color = Color(0.211765, 0.211765, 0.211765, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.211521, 0.211521, 0.211521, 1)
+
+[node name="Node" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+
+[node name="Panel" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -30.5
+offset_bottom = 30.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rfjxe")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Build Tower"
+
+[node name="level" type="Node2D" parent="."]
 script = ExtResource("1_thq3s")
-
-[node name="Area2D" parent="." instance=ExtResource("2_exkv6")]
-position = Vector2(547, 255)
-
-[node name="Area2D2" parent="." instance=ExtResource("2_exkv6")]
-position = Vector2(760, 262)

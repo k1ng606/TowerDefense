@@ -1,0 +1,2 @@
+class_name TowerPreview
+extends Area2D

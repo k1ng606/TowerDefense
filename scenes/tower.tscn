@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dasd7wwe553p3" path="res://assets/icon.svg" id="1_yoobe"]
 [ext_resource type="Script" path="res://scripts/tower.gd" id="2_3l5cv"]
 
-[node name="Area2D" type="Area2D"]
+[node name="Tower" type="Area2D"]
 script = ExtResource("2_3l5cv")
 metadata/_edit_group_ = true
 
